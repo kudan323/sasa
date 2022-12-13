@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>ナッツのホ～ムページ</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+        integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>ナッツのホームページへようこそ！</h1>
+        </header>
+        <div class="preface">
+            <div class="row">
+                <div class="col-xs-6 text-right">
+                    <img src="gahag-0029101499-1.jpg" alt="おしゃれな写真" * width="250" * * height="180" *>
+                </div>
+                <div class="col-sm-4 col-md-4 col-lg-4">
+                    <div id="showClock"></div>
+                    <p>
+                        <br>
+                        <br>
+                        カウボーイって<br>
+                        かっこよくないですか？
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="information">
+            <div class="row">
+                <div class="col-xs-3">
+                </div>
+                <div class="col-xs-6">
+                    <h3>自己紹介</h3>
+                    <ul>
+                        <li>好きなこと：　金曜日と土曜日の夜の時間</li>
+                        <li>好きな食べ物：　クレープ、すき焼き <br>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51999.201740706754!2d139.3242720849847!3d35.45602956341339!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018556fa187621d%3A0x4ecae9be80e5e3da!2z44Gv44G-5a-_5Y-4IOa1t-iAgeWQjeODk-ODiuOCpuOCqeODvOOCr-W6lw!5e0!3m2!1sja!2sjp!4v1668245869837!5m2!1sja!2sjp" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="display: block; margin: auto;"></iframe></li>
+                    </ul>
+                    <h3>趣味</h3>
+                    <ul>
+                        <li><span>・映画鑑賞</span></li>
+                        <li><span>・アニメを見ること
+                        <li><span>・音楽を聴くこと</span></li>    
+                        </span></li>
+                    </ul>
+                    <h3>リンク集</h3>
+                    <ul>
+                        <a href="https://photosku.com/" target="_self"> 著作権フリーの画像サイト></a>
+                    </ul>
+                    <div class="reference">
+                        ◆ 参考にしたサイトです。
+                        <ul>
+                            <li>
+                                <a href="https://www.pref.kanagawa.jp/" target="_self">神奈川県</a>
+                            </li>
+                            <li>
+                                <a href="https://www.tokyotower.co.jp/" target="_self">東京タワー</a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <footer class="afterword">
+            <h2>読んでいただき、ありがとうございました</h2>
+        </footer>
+    </div>
+    <script>
+        var addZero = function(value) {
+            if (value < 10) {
+                value = '0' + value;
+            }
+            return value;
+        };        
+        timerID = setInterval('clock()', 100);
+        function clock() {
+            document.getElementById("showClock").innerHTML = getNow();
+        }
+        function getNow() {
+            var now = new Date();
+            var year = now.getFullYear();
+            var month = now.getMonth() + 1;
+            month = addZero(month);
+            var day = now.getDate();
+            day = addZero(day);
+            var dayOfWeek = now.getDay();
+            var hour = now.getHours();
+            hour = addZero(hour);
+            var min = now.getMinutes();
+            min = addZero(min);
+            var sec = now.getSeconds();
+            sec = addZero(sec);
+            var daysOfWeek = new Array("日", "月", "火", "水", "木", "金", "土");
+            var s = "【" + year + "/" + month + "/" + day + " (" + daysOfWeek[dayOfWeek] + ") " + hour + ":" + min + ":" + sec + "】"; 
+            return s;
+        }
+    </script>
+</body>
+</html>
